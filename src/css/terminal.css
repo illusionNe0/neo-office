@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 14px;
+    user-select: none;
+}
+
+/* Full-Page Terminal Wrapper */
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    border: 2px solid #0f0;
+    color: #0f0;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 0px 0px #0f0;
+}
+
+/* Back Button Hover Effect */
+.back-button:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px #0f0;
+}
+
+/* Back Button Active Effect */
+.back-button:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 20px #0f0;
+    background-color: #0f0;
+    color: #000;
+}
+
+/* Terminal Wrapper */
+.terminal_wrapper {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Header Text */
+.header_text {
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+/* Introduction Text */
+.intro_text {
+    margin-bottom: 15px; /* Slightly reduced bottom margin */
+}
+
+/* Terminal Output */
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+/* Input Line */
+#input-line {
+    display: flex;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+/* Add spacing between outputs */
+.output-text {
+    margin: 10px 0; /* Adds vertical spacing */
+    color: #e6e600; /* Soft yellow */
+
+}
+
+/* Prompt color remains bright green */
+.prompt {
+    color: #00ff00; /* Bright green */
+    margin-right: 5px;
+}
+
+#command-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    caret-color: #00ff00;
+    flex-grow: 1;
+    font-size: 14px;
+    caret-shape: block; /* Block cursor */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+}

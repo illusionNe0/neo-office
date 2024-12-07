@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>illusi0n 0ffice</title>
+</head>
+<body>
+    <div class="wrapper_one">
+        <header class="header">
+            <div class="header_block">
+                <div class="text1">ne0's</div>
+                <div class="text2">0ffice</div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main_block">
+                <div class="main_text">
+                    <span class="typing-text" id="animatedText"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="wrapper_two">
+        <section class="grid_section">
+            <div class="grid_block" data-modal="infoModal">Info</div>
+            <div class="grid_block" data-modal="projectsModal">Projects</div>
+            <div class="grid_block" data-modal="stackModal">Stack</div>
+            <div class="grid_block" data-modal="experienceModal">Experience</div>
+            <div class="grid_block" data-modal="contactModal">Contact</div>
+            <div class="grid_block" data-modal="defaultModal">00</div>
+        </section>
+    </div>
+    
+    <!-- Modals -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>Info</h2>
+            <span>I made this website because I was bored, blah blah blah ashashafboefoewf3ogb</span>
+        </div>
+    </div>
+    
+    <div id="projectsModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>Projects</h2>
+            <p>Coming soon...</p>
+        </div>
+    </div>
+    
+    <div id="stackModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>Stack</h2>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+            <p>Stack</p>
+        </div>
+    </div>
+    
+    <div id="experienceModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>Experience</h2>
+            <p>Currently 1st year CS major student at NU, have a bit of experience in C programming, and that's all</p>
+        </div>
+    </div>
+    
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>Contact</h2>
+            <h3>Contact Links</h3>
+            <ul class="contact_links_list">
+                <li class="contact_links_item">
+                    Telegram:
+                    <a href="https://t.me/illusionNeo" class="contact_link" target="_blank">
+                        @illusionNeo
+                    </a>
+                </li>
+                <li class="contact_links_item">
+                    Email: illusionneodi@gmail.com
+                </li>
+                <li class="contact_links_item">
+                    GitHub:
+                    <a href="https://github.com/illusionNe0" class="contact_link" target="_blank">
+                        https://github.com/illusionNe0
+                    </a>
+                </li>
+                <li class="contact_links_item">
+                    LinkedIn:
+                    <a href="#" class="contact_link">
+                        -
+                    </a>
+                </li>
+            </ul>
+            <br>
+            <h3>Additional Links</h3>
+            <ul class="contact_links_list">
+                <li class="contact_links_item">
+                    LeetCode:
+                    <a href="https://leetcode.com/u/ne00/" class="contact_link" target="_blank">
+                        https://leetcode.com/u/ne00/
+                    </a>
+                </li>
+                <li class="contact_links_item">
+                    Instagram:
+                    <a href="#" class="contact_link" target="_blank">
+                        -
+                    </a>
+                </li>
+                <li class="contact_links_item">
+                    <a href="#" class="contact_link" target="_blank">
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="defaultModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">X</button>
+            <h2>00</h2>
+            <img src="./res/rei.gif" alt="rei" class="rei_gif">
+        </div>
+    </div>
+
+    <div class="wrapper_three">
+        <section class="terminal_section">
+            <div class="terminal_info">
+                <h2>Use CLI aka terminal if you're nerd</h2>
+                <p>I made it for fun</p>
+            </div>
+            <a href="./html/terminal.html" class="terminal_button">Launch</a>
+        </section>
+    </div>    
+    
+    <div class="wrapper_four">
+
+    </div>
+    
+
+    <footer class="wrapper_five">
+        <div class="footer_block">
+            <p>© 2025 ne0's 0ffice. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./src/js/index.js"></script>
+    <script>
+        // Restrict access for mobile devices
+        function checkDevice() {
+            const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 768;
+            
+            if (isMobile) {
+                // Display a full-screen warning message for mobile users
+                document.body.innerHTML = `
+                    <div style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: #000;
+                        color: #0f0;
+                        font-family: 'Roboto Mono', monospace;
+                        font-weight: 300;
+                        text-align: center;
+                        font-size: 20px;
+                        padding: 20px;
+                    ">
+                        <p>Oops bups! This website is designed for desktop use only.<br>Please access it from a laptop or PC.</p>
+                    </div>
+                `;
+            }
+        }
+    
+        // Run the device check when the page loads
+        document.addEventListener('DOMContentLoaded', checkDevice);
+    
+        // Optional: Recheck when the window is resized
+        window.addEventListener('resize', checkDevice);
+    </script>    
+</body>
+</html>

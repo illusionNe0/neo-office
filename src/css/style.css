@@ -1,0 +1,259 @@
+/* General Styling */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+header, main, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header_block {
+    margin-top: 15px; /* Reduced top margin */
+}
+
+.text1, .text2 {
+    font-size: 1.5rem; /* Slightly smaller text */
+    margin-bottom: 5px; /* Add some spacing between header lines */
+}
+
+.main_block {
+    height: 70vh; /* Reduce height for the animation section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add some padding for better centering */
+}
+
+.main_text {
+    font-size: 2.5rem; /* Slightly smaller animated text */
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #0f0;
+}
+
+
+.grid_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 40px 30px; /* Vertical gap: 40px, Horizontal gap: 30px */
+    padding: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* General Styling */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+/* Grid Block Styling */
+.grid_block {
+    user-select: none;         /* Prevent text highlighting */
+    position: relative;
+    width: 85%;
+    aspect-ratio: 1.8;
+    background: #000;
+    border: 2px solid #0f0;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 10px 10px 0px 0px #0f0;
+}
+
+/* Hover Effect */
+.grid_block:hover {
+    transform: translate(-5px, -5px); /* Move up-left */
+    box-shadow: 15px 15px 0px 0px #0f0; /* Shadow expands */
+}
+
+/* Active (Click) Effect */
+.grid_block:active {
+    transform: translate(0, 0); /* Reset position */
+    box-shadow: 0px 0px 20px #0f0; /* Glow effect */
+    background-color: #0f0 !important; /* Force green background */
+    color: #000 !important; /* Force black text */
+}
+
+.grid_block:active::before,
+.grid_block:active::after {
+    display: none; /* Hide pseudo-elements when active */
+}
+
+.grid_block {
+    user-select: none; /* Prevent text highlighting */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none;    /* For Firefox */
+    -ms-user-select: none;     /* For Internet Explorer/Edge */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+/* Close button default styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem; /* Smaller size for the 'X' */
+    color: #0f0; /* Neon green color */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Add a pseudo-element for the 3D shadow effect */
+.close-btn::after {
+    content: "X"; /* The 'X' character for the pseudo-element */
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: transparent; /* Transparent by default */
+    z-index: -1;
+    transform: translate(0, 0);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.close-btn:hover {
+    color: #00ff00; /* Bright green on hover */
+    transform: translate(-2px, -2px); /* Slight move up-left */
+}
+
+.close-btn:hover::after {
+    color: #00ff00; /* Bright green shadow */
+    transform: translate(4px, 4px); /* Move shadow down-right */
+}
+
+/* Active (click) effect */
+.close-btn:active {
+    color: #009900; /* Darker green on click */
+    transform: translate(0, 0); /* Reset position */
+}
+
+.close-btn:active::after {
+    color: #009900; /* Darker green shadow on click */
+    transform: translate(2px, 2px); /* Slight move for shadow */
+}
+
+.close-btn:hover {
+    color: #00ff00;
+}
+
+.grid_block:active {
+    color: #000;
+    background-color: #000;
+}
+
+.contact_links_list {
+    text-align: left;
+}
+
+.contact_link {
+    text-decoration: underline;
+}
+
+.wrapper_five {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #0f0;
+    border-top: 2px solid #0f0;
+}
+
+/* Terminal Section */
+.terminal_section {
+    width: 85%; /* Match the width of grid blocks */
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #0f0;
+    text-align: center;
+    background: #000;
+    box-shadow: 10px 10px 0px 0px #0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Terminal Info Text */
+.terminal_info h2 {
+    font-size: 2rem;
+    color: #0f0;
+    margin-bottom: 10px;
+}
+
+.terminal_info p {
+    font-size: 1.2rem;
+    color: #0f0;
+}
+
+/* Terminal Button Styling */
+.terminal_button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #0f0;
+    border: 2px solid #0f0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 10px 10px 0px 0px #0f0;
+}
+
+/* Hover Effect */
+.terminal_button:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 15px 15px 0px 0px #0f0;
+}
+
+/* Active (Click) Effect */
+.terminal_button:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 20px #0f0;
+    background-color: #0f0;
+    color: #000;
+}
+
+
