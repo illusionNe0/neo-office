@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectsText = `empty -_-`;
 
-    const contactText = `telegram: @illusionNeo
+    const contactText = `telegram: @illusionne0
 email: illusionneodi@gmail.com`;
 
     const stackText = `- programming languages: pyton, piton, pyson
