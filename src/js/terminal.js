@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commandInput = document.getElementById('command-input');
     const output = document.getElementById('output');
 
-    const initialHeader = '<div class="header_text">ne0\'s Terminal. All rights reserved.</div>';
+    const initialHeader = '<div class="header_text">Copyright © 2024-2025 ne0\'s Terminal. All rights reserved.</div>';
     const initialIntro = '<div class="intro_text">Type <strong>\'help\'</strong> to get started.</div>';
 
     // Initial output
